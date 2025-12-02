@@ -73,13 +73,13 @@ Here are some additional outputs for my full default wing again using the Kea fe
 |:--:|:--:|
 |![](Images/FullWingTop2.png)|![](Images/FullWing5.png)|
 
-Lastly I also set up a uv texture for Bluejay feathers for more variation and displayed them on the same base wing.
+Lastly, I also set up a uv texture for Bluejay feathers for more variation and displayed them on the same base wing.
 
 ![](Images/FullWing)
 
 ![](NewImages/BlueJay1.png)
 
-And now for my final results I created three different wing presets using my generator
+And now for my final results I created three different wing presets using my generator:
 
 
 |![](NewImages/BlueJayBlack2.png)|![](NewImages/KeaBlack.png)|
