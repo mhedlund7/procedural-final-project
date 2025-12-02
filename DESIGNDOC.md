@@ -1,0 +1,73 @@
+
+## Design Doc
+
+#### Introduction
+What motivates your project?
+
+Wings look cool, but can be difficult to model individually due to their high number of different feathers and layers. These underlying patterns though lend themselves towards a procedural approach both in generating varius skeletal structures and feather groups, as well as varius sizes and styles of feathers themselves. 
+
+#### Goal
+What do you intend to achieve with this project?
+
+In Houdini create an HDA that given a few high level parameters (species/preset, wingspan, spread, etc) creates a semi-realistic procedurally generated bird wing. Additional goals include rendering and displaying specific results from the HDA, as well as potentially adding rigging or simulation effects.
+
+#### Inspiration/reference:
+- You must have some form of reference material for your final project. Your reference may be a research paper, a blog post, some artwork, a video, another class at Penn, etc.  
+- Include in your design doc links to and images of your reference material.
+
+* [Avian Report: Ornithology and Bird Biology](https://avianreport.com/ornithology-bird-biology/)
+* [Everything You Need To Know About Feathers](https://academy.allaboutbirds.org/feathers-article/)
+* [The Form and Motion of Real Birds: Morphology of Aves](https://falconsongstudios.com/bird-anatomy)
+* [Birdify: Wing Shapes](https://www.birdfy.com/blogs/blogs/types-of-bird-wings-everything-you-need-to-know?srsltid=AfmBOooqPglGS5LFMCmoPbHOaWTLjkM7Vb7iix4vRPwi86O1jhLUzl7k)
+* [How To Draw Wings](https://www.clipstudio.net/how-to-draw/archives/168451)
+* [Featherbase](https://www.featherbase.info/en/species/Erithacus/rubecula)
+
+#### Specification and Techniques:
+Outline the main features of your project.
+What are the main technical/algorithmic tools you’ll be using? Give an overview, citing specific papers/articles.
+
+* Parameters and models for feathers - likely a mix of houdini and blender
+* Wing skeleton generator
+* Feather rows and individual feather placement and orientation modules
+* Featured presets and renders with shading and uvs
+* Stretch: Rigging/animation
+
+
+#### Timeline:
+Create a week-by-week set of milestones for each person in your group. Make sure you explicitly outline what each group member's duties will be.
+
+* Milestone 1: Create a base houdini generator able to produce a simple wing, look into rigging underlying skeletal structure
+* Milesone 2: Iterate and refine the generator to function better and develop set presets of settings that look good and demonstrate various types of wings.
+* Final: Develop presets into proper renders and scenes/turntables showcasing the generators results
+
+## Milestone 1: Implementation part 1 (due 11/12)
+Begin implementing your engine! Don't worry too much about polish or parameter tuning -- this week is about getting together the bulk of your generator implemented. By the end of the week, even if your visuals are crude, the majority of your generator's functionality should be done.
+
+Put all your code in your forked repository.
+
+Submission: Add a new section to your README titled: Milestone #1, which should include
+- written description of progress on your project goals. If you haven't hit all your goals, what's giving you trouble?
+- Examples of your generators output so far
+We'll check your repository for updates. No need to create a new pull request.
+
+## Milestone 2: Implementation part 2 (due 11/24)
+We're over halfway there! This week should be about fixing bugs and extending the core of your generator. Make sure by the end of this week _your generator works and is feature complete._ Any core engine features that don't make it in this week should be cut! Don't worry if you haven't managed to exactly hit your goals. We're more interested in seeing proof of your development effort than knowing your planned everything perfectly. 
+
+Put all your code in your forked repository.
+
+Submission: Add a new section to your README titled: Milestone #3, which should include
+- written description of progress on your project goals. If you haven't hit all your goals, what did you have to cut and why? 
+- Detailed output from your generator, images, video, etc.
+We'll check your repository for updates. No need to create a new pull request.
+
+Come to class on the due date with a WORKING COPY of your project. We'll be spending time in class critiquing and reviewing your work so far.
+
+## Final submission (due 12/1)
+Time to polish! Spen this last week of your project using your generator to produce beautiful output. Add textures, tune parameters, play with colors, play with camera animation. Take the feedback from class critques and use it to take your project to the next level.
+
+Submission:
+- Push all your code / files to your repository
+- Come to class ready to present your finished project
+- Update your README with two sections 
+  - final results with images and a live demo if possible
+  - post mortem: how did your project go overall? Did you accomplish your goals? Did you have to pivot?

@@ -1,135 +1,96 @@
-# Final Project!
+# Procedural Bird Wings
 
-This is it! The culmination of your procedural graphics experience this semester. For your final project, we'd like to give you the time and space to explore a topic of your choosing. You may choose any topic you please, so long as you vet the topic and scope with an instructor or TA. We've provided some suggestions below. The scope of your project should be roughly 1.5 homework assignments). To help structure your time, we're breaking down the project into 4 milestones:
+## Milestone #1
 
-## Project planning: Design Doc (due 11/5)
-Before submitting your first milestone, _you must get your project idea and scope approved by Rachel, Adam or a TA._
+For Milestone 1 I've been focused on creating and modeling base feathers to work off of in houdini. 
 
-### Design Doc
-Start off by forking this repository. In your README, write a design doc to outline your project goals and implementation plan. It must include the following sections:
+|![](References/BirdWingDiagram.webp)|
+|:--:|
+|*Bird Wing Reference Image*|
 
-#### Introduction
-What motivates your project?
+As can be seen in the above diagram different parts of a birds wings have different types of feathers. The largest groups are the flight wings and consist of the primaries, secondaries, and terials (to the inside of the secondaries), and as we move closer to the base of the wing there are the different types of covert feathers greater covert, median covert, lesser covert, and primary covert (Grouped into secondary and marginal vs primary covert feathers in this diagram).
 
-Wings look cool, but can be difficult to model individually due to their high number of different feathers and layers. These underlying patterns though lend themselves towards a procedural approach both in generating varius skeletal structures and feather groups, as well as varius sizes and styles of feathers themselves. 
+|![](References/FeatherReferences/EuropeanGoldfinchFeathers.jpg)|![](References/FeatherReferences/CommonBuzzardFeathers.jpg)|
+|:--:|:--:|
 
-#### Goal
-What do you intend to achieve with this project?
+We can more easily see the differences between the kinds of feathers through real life layouts like those above. The different kinds of feathers have different shapes, patterns, and fluffyness to them.
 
-In Houdini create an HDA that given a few high level parameters (species/preset, wingspan, spread, etc) creates a semi-realistic procedurally generated bird wing. Additional goals include rendering and displaying specific results from the HDA, as well as potentially adding rigging or simulation effects.
+Now to actually model feathers in houdini, I started off with a simple feather without much variation using Houdini 20's feather workflow.
 
-#### Inspiration/reference:
-- You must have some form of reference material for your final project. Your reference may be a research paper, a blog post, some artwork, a video, another class at Penn, etc.  
-- Include in your design doc links to and images of your reference material.
+![](Images/SimpleFeather.png)
 
+From there, working from the feather layouts above I created different base feather's corresponding to each of the types of feathers. Moving forward I'll use these as bases to procedurallly generate feathers to place on my wing.
+|![](Images/MultipleFeathersNoTexture.png)|![](Images/FeatherSideView.png)|
+|:--:|:--:|
+
+Right now while I haven't hit all of my project goals of having most of the generator created, I was able to make the feathers themselves a lot more detailed than what I was expecting. Because of this though they took up most of my time, but it means I'll be able to produce higher quality wings moving forward. Most of what's been giving me trouble so far is just working within Houdini's feather workflow, because while it is very powerful the nodes are quite unfamiliar to me and there aren't a lot of good resources on the many ways to use them. Lastly, the bulk of the wings will be based on procedurally placing said feathers so even though I haven't gotten to that yet I believe I should still be on track. 
+
+## Milestone #2
+
+This milestone I focused on the process of procedurally placing and altering the feathers. As a first step from my base feathers I created a feather layout similar to my references from milestone 1. I also created uvs for my feathers so that they could be textured from a reference image of the wings of a Kea.
+Feather Spread Image
+![]()
+
+The next step was to actually create a wing from the feathers. I settled on the base wing shape below to start with, but my base feathers had a lot of problems based on their thickness, and having their barbs poke through eachother.
+|![](Images/PokeyWingSpread.png)|
+|:--:|
+
+I first focused onn adjusting the way I procedurally placed the feathers to be. based on two curves, one for the base of the feathers and one for the tips, so that I could then raise the later curve on the covert feathers so that they could be seen ontop of the main flight feathers.
+
+![](Images/BadWing4.png)
+
+I also adjusted the width and noise used for the barbs of the feathers so that they were less vertical and wouldn't interfere with eachother. 
+|![](Images/BaseWingSpread.png)|![](Images/AngledWingSide.png)|
+|:--:|:--:|
+
+Lastly I also experimented with grooming to procedurally place a bunch of feathers at once which I'll use in the future for the base of my wing.
+
+|![](Images/SphereGroomNoTexture.png)|![](Images/SphereGroom.png)|
+|:--:|:--:|
+
+I think I'm pretty on track for my milestone 2 goals, allthough I would like to make the wing I generate look more cohesive and grounded which I think adding the base of the wing will help a lot with before the final submission. Additionally now that I have most of the tools for creating the wing set up, I want to expirement more with different textures and wing poses moving forward.
+
+## Final Results
+
+![](NewImages/Groom.png)
+![](NewImages/Groom2.png)
+![](NewImages/UVGroom.png)
+
+![](Images/FullWingNoUVS.png)
+![](Images/FullWingNoUVS2.png)
+![](Images/FullWingNoUVS3.png)
+![](Images/FullWingNoUVS4.png)
+![](Images/FullWingAltGroom.png)
+![](Images/FullWingTop.png)
+![](Images/FullWingTop2.png)
+![](Images/FullWing2.png)
+![](Images/FullWing5.png)
+![](Images/FullWing)
+
+![](NewImages/BlueJay1.png)
+
+![](NewImages/BlueJayBlack.png)
+![](NewImages/BlueJayBlack2.png)
+![](NewImages/BlueJayBlack3.png)
+
+![](NewImages/KeaBlack.png)
+![](NewImages/KeaBlack2.png)
+![](NewImages/KeaBlack3.png)
+
+
+![](Renders/Render3.png)
+![](Renders/Render4.png)
+![](Renders/Render2.png)
+![](Renders/Render5.png)
+
+
+## Post Mortem
+
+## References
 * [Avian Report: Ornithology and Bird Biology](https://avianreport.com/ornithology-bird-biology/)
 * [Everything You Need To Know About Feathers](https://academy.allaboutbirds.org/feathers-article/)
 * [The Form and Motion of Real Birds: Morphology of Aves](https://falconsongstudios.com/bird-anatomy)
 * [Birdify: Wing Shapes](https://www.birdfy.com/blogs/blogs/types-of-bird-wings-everything-you-need-to-know?srsltid=AfmBOooqPglGS5LFMCmoPbHOaWTLjkM7Vb7iix4vRPwi86O1jhLUzl7k)
 * [How To Draw Wings](https://www.clipstudio.net/how-to-draw/archives/168451)
-
-#### Specification and Techniques:
-Outline the main features of your project.
-What are the main technical/algorithmic tools you’ll be using? Give an overview, citing specific papers/articles.
-
-* Parameters and models for feathers - likely a mix of houdini and blender
-* Wing skeleton generator
-* Feather rows and individual feather placement and orientation modules
-* Featured presets and renders with shading and uvs
-* Stretch: Rigging/animation
-
-
-#### Timeline:
-Create a week-by-week set of milestones for each person in your group. Make sure you explicitly outline what each group member's duties will be.
-
-* Milestone 1: Create a base houdini generator able to produce a simple wing, look into rigging underlying skeletal structure
-* Milesone 2: Iterate and refine the generator to function better and develop set presets of settings that look good and demonstrate various types of wings.
-* Final: Develop presets into proper renders and scenes/turntables showcasing the generators results
-
-
-Submit your Design doc as usual via pull request against this repository.
-
-## Milestone 1: Implementation part 1 (due 11/12)
-Begin implementing your engine! Don't worry too much about polish or parameter tuning -- this week is about getting together the bulk of your generator implemented. By the end of the week, even if your visuals are crude, the majority of your generator's functionality should be done.
-
-Put all your code in your forked repository.
-
-Submission: Add a new section to your README titled: Milestone #1, which should include
-- written description of progress on your project goals. If you haven't hit all your goals, what's giving you trouble?
-- Examples of your generators output so far
-We'll check your repository for updates. No need to create a new pull request.
-## Milestone 2: Implementation part 2 (due 11/24)
-We're over halfway there! This week should be about fixing bugs and extending the core of your generator. Make sure by the end of this week _your generator works and is feature complete._ Any core engine features that don't make it in this week should be cut! Don't worry if you haven't managed to exactly hit your goals. We're more interested in seeing proof of your development effort than knowing your planned everything perfectly. 
-
-Put all your code in your forked repository.
-
-Submission: Add a new section to your README titled: Milestone #3, which should include
-- written description of progress on your project goals. If you haven't hit all your goals, what did you have to cut and why? 
-- Detailed output from your generator, images, video, etc.
-We'll check your repository for updates. No need to create a new pull request.
-
-Come to class on the due date with a WORKING COPY of your project. We'll be spending time in class critiquing and reviewing your work so far.
-
-## Final submission (due 12/1)
-Time to polish! Spen this last week of your project using your generator to produce beautiful output. Add textures, tune parameters, play with colors, play with camera animation. Take the feedback from class critques and use it to take your project to the next level.
-
-Submission:
-- Push all your code / files to your repository
-- Come to class ready to present your finished project
-- Update your README with two sections 
-  - final results with images and a live demo if possible
-  - post mortem: how did your project go overall? Did you accomplish your goals? Did you have to pivot?
-
-## Topic Suggestions
-
-### Create a generator in Houdini
-
-### A CLASSIC 4K DEMO
-- In the spirit of the demo scene, create an animation that fits into a 4k executable that runs in real-time. Feel free to take inspiration from the many existing demos. Focus on efficiency and elegance in your implementation.
-- Example: 
-  - [cdak by Quite & orange](https://www.youtube.com/watch?v=RCh3Q08HMfs&list=PLA5E2FF8E143DA58C)
-
-### A RE-IMPLEMENTATION
-- Take an academic paper or other pre-existing project and implement it, or a portion of it.
-- Examples:
-  - [2D Wavefunction Collapse Pokémon Town](https://gurtd.github.io/566-final-project/)
-  - [3D Wavefunction Collapse Dungeon Generator](https://github.com/whaoran0718/3dDungeonGeneration)
-  - [Reaction Diffusion](https://github.com/charlesliwang/Reaction-Diffusion)
-  - [WebGL Erosion](https://github.com/LanLou123/Webgl-Erosion)
-  - [Particle Waterfall](https://github.com/chloele33/particle-waterfall)
-  - [Voxelized Bread](https://github.com/ChiantiYZY/566-final)
-
-### A FORGERY
-Taking inspiration from a particular natural phenomenon or distinctive set of visuals, implement a detailed, procedural recreation of that aesthetic. This includes modeling, texturing and object placement within your scene. Does not need to be real-time. Focus on detail and visual accuracy in your implementation.
-- Examples:
-  - [The Shrines](https://github.com/byumjin/The-Shrines)
-  - [Watercolor Shader](https://github.com/gracelgilbert/watercolor-stylization)
-  - [Sunset Beach](https://github.com/HanmingZhang/homework-final)
-  - [Sky Whales](https://github.com/WanruZhao/CIS566FinalProject)
-  - [Snail](https://www.shadertoy.com/view/ld3Gz2)
-  - [Journey](https://www.shadertoy.com/view/ldlcRf)
-  - [Big Hero 6 Wormhole](https://2.bp.blogspot.com/-R-6AN2cWjwg/VTyIzIQSQfI/AAAAAAAABLA/GC0yzzz4wHw/s1600/big-hero-6-disneyscreencaps.com-10092.jpg)
-
-### A GAME LEVEL
-- Like generations of game makers before us, create a game which generates an navigable environment (eg. a roguelike dungeon, platforms) and some sort of goal or conflict (eg. enemy agents to avoid or items to collect). Aim to create an experience that will challenge players and vary noticeably in different playthroughs, whether that means procedural dungeon generation, careful resource management or an interesting AI model. Focus on designing a system that is capable of generating complex challenges and goals.
-- Examples:
-  - [Rhythm-based Mario Platformer](https://github.com/sgalban/platformer-gen-2D)
-  - [Pokémon Ice Puzzle Generator](https://github.com/jwang5675/Ice-Puzzle-Generator)
-  - [Abstract Exploratory Game](https://github.com/MauKMu/procedural-final-project)
-  - [Tiny Wings](https://github.com/irovira/TinyWings)
-  - Spore
-  - Dwarf Fortress
-  - Minecraft
-  - Rogue
-
-### AN ANIMATED ENVIRONMENT / MUSIC VISUALIZER
-- Create an environment full of interactive procedural animation. The goal of this project is to create an environment that feels responsive and alive. Whether or not animations are musically-driven, sound should be an important component. Focus on user interactions, motion design and experimental interfaces.
-- Examples:
-  - [The Darkside](https://github.com/morganherrmann/thedarkside)
-  - [Music Visualizer](https://yuruwang.github.io/MusicVisualizer/)
-  - [Abstract Mesh Animation](https://github.com/mgriley/cis566_finalproj)
-  - [Panoramical](https://www.youtube.com/watch?v=gBTTMNFXHTk)
-  - [Bound](https://www.youtube.com/watch?v=aE37l6RvF-c)
-
-### YOUR OWN PROPOSAL
-- You are of course welcome to propose your own topic . Regardless of what you choose, you and your team must research your topic and relevant techniques and come up with a detailed plan of execution. You will meet with some subset of the procedural staff before starting implementation for approval.
+* [Featherbase](https://www.featherbase.info/en/species/Erithacus/rubecula)
+* [Feathers - Simulating and Rendering](https://www.youtube.com/watch?v=rmIA-krfvXk&list=PLe0XlBlHzrpWeE5Mip7AOyXdEyR8jbrXe&index=9)
