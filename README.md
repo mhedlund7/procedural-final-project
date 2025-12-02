@@ -57,7 +57,7 @@ I think I'm pretty on track for my milestone 2 goals, allthough I would like to 
 
 ## Final Results
 
-Before sharing the final results, I made some additional updates to my r=procedural bird wings. The main change I made was using a groom to create the base of the wing like I mentioned in the last milestone. The groom by itself for my default wing is shown below.
+Before sharing the final results, I made some additional updates to my procedural bird wings. The main change I made was using a groom to create the base of the wing like I mentioned in the last milestone. The groom by itself for my default wing is shown below.
 |![](NewImages/Groom.png)|![](NewImages/Groom2.png)|
 |:--:|:--:|
 
